@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog 9</title>
+</head>
+<body>
+    
+    <h1>Blog 9</h1>
+    <h2>strict mode</h2>
+
+    <p>
+        As someone that started coding with Java, JavaScript is something hard to find errors.
+        JavaScript is a dynamic type language and the JavaScript compiler is very forgiving about
+        bad syntax. For example, the following code will not compile in an error:
+    </p>
+
+    <pre>
+        1)
+        x = 85.9;
+
+
+        2)
+        function hello(r1,r1){
+            //...
+        }
+    </pre>
+
+    <p>
+        These kind of things can cause pain when trying to figure out why the code is not working.
+        That why on ECMAScript version 5, the "use strict" mode was release as a way to secure
+        our code from this bad syntax.
+
+        The  following examples, would have not been resulted in error but because of "use strict"
+        we are able to catch this errors on time.
+    </p>
+
+    <h1>Examples</h1>
+
+    <pre>
+        "use strict";
+        h = 78.6;                // This will cause an error
+    </pre>
+    
+    <pre>
+        "use strict";
+        p = {p1:10, p2:20};     
+    </pre>
+
+    <pre>
+        "use strict";
+        function t(p1, p2) {};      //Deleting a function is not allowed.
+        delete x;  
+    </pre>
+
+    <pre>
+        "use strict";
+        let eval = 3.14;
+    </pre>
+
+
+    <p>
+        Using strict mode is becoming a convention so you should always try to use strict mode
+        to prevent errors.
+    </p>
+
+    <p>
+        Information for this blog post can be find in <a href="https://www.w3schools.com/js/js_strict.asp">W3schools.com</a>
+    </p>
+
+    
+</body>
+</html>

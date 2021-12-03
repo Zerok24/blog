@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="codemirror\theme\monokai.css">
+
+    <script src="/codemirror/lib/codemirror.js"></script>
+    <script src="codemirror\mode\javascript\javascript.js"></script>
+
+
+    <title>Blog 10</title>
+</head>
+<body>
+
+    <h1>Blog 10</h1>
+    <h2>CodeMirror</h2>
+
+    <p>
+        Inspire the book for this class, I wanted to start a personal project in which I need 
+        a online code editor for my website. After google around for many hours I came around an open source project
+        called CodeMirror. CodeMirror makes it super easy to make a browser code editor for JavaScript. It is also 
+        super customizeable. 
+    </p>
+    
+    <p>
+        Just download the project from <a href="https://codemirror.net/">here</a>, and then add the following lines of code:
+    </p>
+
+    <p>
+        The easiest way to use CodeMirror is to simply load the script and style sheet found under
+        lib/ in the distribution, plus a mode script from one of the mode/ directories. For example:
+    </p>
+    
+    <p>
+        <img src="/codemirror1.PNG" alt="basic usage">
+    </p>
+
+    <p>
+        Then you create a text area in you HTML. After that in your script you do the following: 
+    </p>
+
+    <p>
+        <img src="/codemirror2.PNG" alt="script codemirror">
+    </p>
+
+    <textarea id="code">console.log("Hello, World!");</textarea>
+
+    <p>It is that easy!</p>
+
+    <p>
+        Though this is already very helpful for whatever you want to do, you might want to add 
+        more customization like sintax highlighting or add a theme this can easily be done with  the 
+        following lines of code.
+    </p>
+    <p>
+        Link the stylesheet in the "theme" forder inside codemirror.
+        <p>
+
+            <img src="/codemirror4.PNG" alt="">
+        </p>
+    </p>
+    <p>
+        <img src="/codemirror3.PNG" alt="">
+    </p>
+    
+    <textarea id="code2" >console.log("Hello, World!");
+//Your code goes here
+    </textarea>
+
+
+    <p>
+        The customization is ultimited. There are plenty of themes to choose from, over 100
+        programming languages, and since it is and open source project, you can add things if 
+        you like to.
+    </p>
+
+    <p>
+        Check out CodeMirror <a href="https://codemirror.net/">website</a> to see all you can do.
+    </p>
+
+</body>
+
+<script>
+
+    const editor = CodeMirror.fromTextArea(document.getElementById("code"),{
+        lineNumbers: true,
+        mode: "javascript"
+    } );
+
+    editor.setSize(300,200);
+
+    const editor2 = CodeMirror.fromTextArea(document.getElementById("code2"),{
+        lineNumbers: true,
+        mode: "javascript",
+        theme: "monokai"
+    } );
+
+
+</script>
+
+</html>
